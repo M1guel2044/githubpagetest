@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <form id="loginForm">
+        <section class="form-login">
+            <h4>Iniciar Sesión</h4>
+            <input class="controls" type="email" id="correo" placeholder="Ingrese su Correo" required>
+            <input class="controls" type="password" id="contraseña" placeholder="Ingrese su Contraseña" required>
+            <input class="botons" type="submit" value="Ingresar">
+            <p><a href="Registro.html">¿No tienes cuenta? Regístrate</a></p>
+        </section>
+    </form>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let correo = document.getElementById("correo").value;
+            let contraseña = document.getElementById("contraseña").value;
+
+            let storedCorreo = localStorage.getItem("correo");
+            let storedContraseña = localStorage.getItem("contraseña");
+
+            if (correo === storedCorreo && contraseña === storedContraseña) {
+                alert("Inicio de sesión exitoso");
+                window.location.href = "Mural.html";
+            } else {
+                alert("Correo o contraseña incorrectos");
+            }
+        });
+    </script>
+</body>
+</html>

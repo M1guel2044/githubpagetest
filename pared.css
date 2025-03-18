@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('fondo.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'calibri', sans-serif;
+}
+
+.forum-container {
+    width: 500px;
+    background: #24303c;
+    padding: 20px;
+    border-radius: 4px;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+.controls {
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-size: 18px;
+    color: white;
+    resize: none;
+}
+
+.botons {
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.botons:hover {
+    background: #1541a1;
+}
+
+.comments-container {
+    margin-top: 20px;
+    text-align: left;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.comment {
+    background: #1b2530;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+.comment strong {
+    color: #1f53c5;
+}
